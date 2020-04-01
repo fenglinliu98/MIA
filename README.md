@@ -3,9 +3,8 @@ Implementation of "Aligning Visual Regions and Textual Concepts for Semantic-Gro
 
 ## Semantic-Grounded Image Representations (Based on the Bottom-up features)
 ###  Coming Soon!
-*  [2014 Train/Val Semantic-Grounded Image Representations]()
+*  [2014 Train/Val Semantic-Grounded Image Representations](https://github.com/fenglinliu98/MIA)
 
-*  [2014 Testing Semantic-Grounded Image Representations]()
 
 ## Usage
 
