@@ -11,8 +11,6 @@ Implementation of "Aligning Visual Regions and Textual Concepts for Semantic-Gro
 ### Requirements
 This code is written in Python2.7 and requires PyTorch >= 0.4.1
 
-You need to download pre-trained Resnet152 model from [torchvision](https://github.com/pytorch/vision) for both training and evaluation. 
-
 You may take a look at https://github.com/s-gupta/visual-concepts to find how to get the topic words of an image.
 
 ### Training
