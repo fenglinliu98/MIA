@@ -14,6 +14,7 @@ Implementation of "Aligning Visual Regions and Textual Concepts for Semantic-Gro
 This code is written in Python2.7 and requires PyTorch >= 0.4.1
 
  [Textual Concepts (Google Drive)](https://drive.google.com/open?id=1jpSZbLXD1Ev3OC2t_NFFvxYo40UcnV7Q)
+ 
 You may take a look at https://github.com/s-gupta/visual-concepts to find how to get the textual concepts of an image by yourself.
 
 ### Download Download MSCOCO dataset
@@ -21,10 +22,11 @@ Download the mscoco images from  [link](http://mscoco.org/dataset/#download). We
 
 ### Download Download MSCOCO captions
 You may download the mscoco captions from the [official website](http://mscoco.org/dataset/#download).
+
 We also provide a [link](https://github.com/fenglinliu98/MIA) to download our preprocessed mscoco captions.
 
 ### Start Training
-Now we can train the baseline models and the baseline w/ MIA models with 
+Now we can train the baseline models and the baseline w/ MIA models with: 
 
 #### Visual Attention
 * **Baseline**
