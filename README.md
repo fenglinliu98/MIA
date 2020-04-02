@@ -17,13 +17,19 @@ This code is written in Python2.7 and requires PyTorch >= 0.4.1
  
 You may take a look at https://github.com/s-gupta/visual-concepts to find how to get the textual concepts of an image by yourself.
 
-### Download MSCOCO dataset
+### Dataset Preparation
+#### Download MSCOCO images and preprocess them
 Download the mscoco images from  [link](http://mscoco.org/dataset/#download). We need 2014 training images and 2014 val. images. You should put the train2014/ and val2014/ in the ./data/images/ directory.
 
-### Download MSCOCO captions
+We also provide a download bash script to download the mscoco images:
+```
+bash ./data/download_mscoco_images.sh
+```
+
+#### Download MSCOCO captions and preprocess them
 You may download the mscoco captions from the [official website](http://mscoco.org/dataset/#download).
 
-We also provide a [link](https://github.com/fenglinliu98/MIA) to download our preprocessed mscoco captions.
+Note: We also provide a [link](https://github.com/fenglinliu98/MIA) to download our preprocessed mscoco captions.
 
 ### Start Training
 Now we can train the baseline models and the baseline w/ MIA models with: 
