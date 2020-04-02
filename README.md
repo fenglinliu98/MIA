@@ -1,9 +1,9 @@
 # MIA （NeurIPS 2019）
 Implementation of "Aligning Visual Regions and Textual Concepts for Semantic-Grounded Image Representations" by Fenglin Liu, Yuanxin Liu, Xuancheng Ren, Xiaodong He, and Xu Sun. The paper can be found at [[arxiv]](https://arxiv.org/abs/1905.06139),  [[pdf]](https://papers.nips.cc/paper/8909-aligning-visual-regions-and-textual-concepts-for-semantic-grounded-image-representations.pdf).
 
-![Image text](https://github.com/fenglinliu98/MIA/blob/master/model.pdf)
+![Image text](https://github.com/fenglinliu98/MIA/blob/master/model.png)
 
-## Semantic-Grounded Image Representations (Based on the Bottom-up features)
+## Semantic-Grounded Image Representations (Based on the  [Bottom-up features](https://github.com/peteanderson80/bottom-up-attention))
 ###  Coming Soon!
 *  [2014 Train/Val Semantic-Grounded Image Representations](https://github.com/fenglinliu98/MIA)
 
@@ -13,9 +13,17 @@ Implementation of "Aligning Visual Regions and Textual Concepts for Semantic-Gro
 ### Requirements
 This code is written in Python2.7 and requires PyTorch >= 0.4.1
 
-You may take a look at https://github.com/s-gupta/visual-concepts to find how to get the topic words of an image.
+ [Textual Concepts (Google Drive)](https://drive.google.com/open?id=1jpSZbLXD1Ev3OC2t_NFFvxYo40UcnV7Q)
+You may take a look at https://github.com/s-gupta/visual-concepts to find how to get the textual concepts of an image by yourself.
 
-### Training
+### Download Download MSCOCO dataset
+Download the mscoco images from  [link](http://mscoco.org/dataset/#download). We need 2014 training images and 2014 val. images. You should put the train2014/ and val2014/ in the ./data/images/ directory.
+
+### Download Download MSCOCO captions
+You may download the mscoco captions from the [official website](http://mscoco.org/dataset/#download).
+We also provide a [link](https://github.com/fenglinliu98/MIA) to download our preprocessed mscoco captions.
+
+### Start Training
 Now we can train the baseline models and the baseline w/ MIA models with 
 
 #### Visual Attention
