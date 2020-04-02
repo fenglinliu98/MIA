@@ -17,10 +17,10 @@ This code is written in Python2.7 and requires PyTorch >= 0.4.1
  
 You may take a look at https://github.com/s-gupta/visual-concepts to find how to get the textual concepts of an image by yourself.
 
-### Download Download MSCOCO dataset
+### Download MSCOCO dataset
 Download the mscoco images from  [link](http://mscoco.org/dataset/#download). We need 2014 training images and 2014 val. images. You should put the train2014/ and val2014/ in the ./data/images/ directory.
 
-### Download Download MSCOCO captions
+### Download MSCOCO captions
 You may download the mscoco captions from the [official website](http://mscoco.org/dataset/#download).
 
 We also provide a [link](https://github.com/fenglinliu98/MIA) to download our preprocessed mscoco captions.
