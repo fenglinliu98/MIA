@@ -28,6 +28,7 @@ bash ./data/download_mscoco_images.sh
 
 #### Download MSCOCO captions and preprocess them
 * **Download**
+
 You may download the mscoco captions from the [official website](http://mscoco.org/dataset/#download).
 
 Note: We also provide a [link](https://github.com/fenglinliu98/MIA) to download our preprocessed mscoco captions.
