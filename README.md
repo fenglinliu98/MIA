@@ -31,6 +31,12 @@ You may download the mscoco captions from the [official website](http://mscoco.o
 
 Note: We also provide a [link](https://github.com/fenglinliu98/MIA) to download our preprocessed mscoco captions.
 
+#### Download MSCOCO captions and preprocess them
+Download the [Textual Concepts (Google Drive)](https://drive.google.com/open?id=1jpSZbLXD1Ev3OC2t_NFFvxYo40UcnV7Q) and put it in the ./data/ directory.
+```
+mv image_concepts.json ./data/
+```
+
 ### Start Training
 Now we can train the baseline models and the baseline w/ MIA models with: 
 
