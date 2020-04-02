@@ -102,7 +102,7 @@ CUDA_VISIBLE_DEVICES=0 python test.py  --basic_model basic_model_name --MIA True
 ```
 
 ## Reference
-If you use this code as part of any published research, please acknowledge the following paper
+If you use this code or our extracted image concepts as part of any published research, please acknowledge the following paper
 ```
 @inproceedings{Liu2019MIA,
   author    = {Fenglin Liu and
