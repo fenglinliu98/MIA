@@ -1,6 +1,8 @@
 # MIA （NeurIPS 2019）
 Implementation of "Aligning Visual Regions and Textual Concepts for Semantic-Grounded Image Representations" by Fenglin Liu, Yuanxin Liu, Xuancheng Ren, Xiaodong He, and Xu Sun. The paper can be found at [[arxiv]](https://arxiv.org/abs/1905.06139),  [[pdf]](https://papers.nips.cc/paper/8909-aligning-visual-regions-and-textual-concepts-for-semantic-grounded-image-representations.pdf).
 
+![Image text](https://github.com/fenglinliu98/MIA/blob/master/model.pdf)
+
 ## Semantic-Grounded Image Representations (Based on the Bottom-up features)
 ###  Coming Soon!
 *  [2014 Train/Val Semantic-Grounded Image Representations](https://github.com/fenglinliu98/MIA)
