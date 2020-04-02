@@ -19,12 +19,16 @@ You may take a look at https://github.com/s-gupta/visual-concepts to find how to
 
 ### Dataset Preparation
 #### Download MSCOCO images and preprocess them
+* **Download**
 Download the mscoco images from  [link](http://mscoco.org/dataset/#download). We need 2014 training images and 2014 val. images. You should put the train2014/ and val2014/ in the ./data/images/ directory.
 
 Note: We also provide a download bash script to download the mscoco images:
 ```
 bash ./data/download_mscoco_images.sh
 ```
+
+* **Preprocess**
+
 
 #### Download MSCOCO captions and preprocess them
 * **Download**
