@@ -21,17 +21,20 @@ You may take a look at https://github.com/s-gupta/visual-concepts to find how to
 #### Download MSCOCO images and preprocess them
 Download the mscoco images from  [link](http://mscoco.org/dataset/#download). We need 2014 training images and 2014 val. images. You should put the train2014/ and val2014/ in the ./data/images/ directory.
 
-We also provide a download bash script to download the mscoco images:
+Note: We also provide a download bash script to download the mscoco images:
 ```
 bash ./data/download_mscoco_images.sh
 ```
 
 #### Download MSCOCO captions and preprocess them
+* **Download**
 You may download the mscoco captions from the [official website](http://mscoco.org/dataset/#download).
 
 Note: We also provide a [link](https://github.com/fenglinliu98/MIA) to download our preprocessed mscoco captions.
 
-#### Download MSCOCO captions and preprocess them
+* **Preprocess (Skip if you are using our preprocessed captions)**
+
+#### Download image concepts and preprocess them
 Download the [Textual Concepts (Google Drive)](https://drive.google.com/open?id=1jpSZbLXD1Ev3OC2t_NFFvxYo40UcnV7Q) and put it in the ./data/ directory.
 ```
 mv image_concepts.json ./data/
