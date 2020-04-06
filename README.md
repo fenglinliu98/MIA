@@ -38,6 +38,9 @@ mkdir data/resized && python resize.py
 * **Download**
 
 You may download the mscoco captions from the [official website](http://mscoco.org/dataset/#download).
+```
+bash ./data/download_mscoco_captions.sh
+```
 
 Note: We also provide a [link](https://github.com/fenglinliu98/MIA) to download our preprocessed mscoco captions.
 
@@ -55,7 +58,7 @@ python build_vocab.py
 #### Download image concepts
 Download the [Textual Concepts (Google Drive)](https://drive.google.com/open?id=1jpSZbLXD1Ev3OC2t_NFFvxYo40UcnV7Q) and put it in the ./data/ directory.
 ```
-mv image_concepts.json ./data/
+mv image_concepts.json ./data
 ```
 
 ### Start Training
