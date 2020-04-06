@@ -20,6 +20,7 @@ You may take a look at https://github.com/s-gupta/visual-concepts to find how to
 ### Dataset Preparation
 #### Download MSCOCO images and preprocess them
 * **Download**
+
 Download the mscoco images from  [link](http://mscoco.org/dataset/#download). We need 2014 training images and 2014 val. images. You should put the train2014/ and val2014/ in the ./data/images/ directory.
 
 Note: We also provide a download bash script to download the mscoco images:
@@ -29,6 +30,10 @@ bash ./data/download_mscoco_images.sh
 
 * **Preprocess**
 
+Now we will need to resize all the images in both train and val folder. Here I create a new folder under data, i.e., 'resized'. Then we may run resize.py to resize all images into 256 x 256. You may specify different locations inside resize.py
+```
+mkdir data/resized && python resize.py
+```
 
 #### Download MSCOCO captions and preprocess them
 * **Download**
@@ -38,8 +43,17 @@ You may download the mscoco captions from the [official website](http://mscoco.o
 Note: We also provide a [link](https://github.com/fenglinliu98/MIA) to download our preprocessed mscoco captions.
 
 * **Preprocess (Skip if you are using our preprocessed captions)**
+Afterwards, we should create the Karpathy split for training, validation and test.
+```
+python KarpathySplit.py
+```
 
-#### Download image concepts and preprocess them
+Then we can build the vocabulary by running
+```
+python build_vocab.py
+```
+
+#### Download image concepts
 Download the [Textual Concepts (Google Drive)](https://drive.google.com/open?id=1jpSZbLXD1Ev3OC2t_NFFvxYo40UcnV7Q) and put it in the ./data/ directory.
 ```
 mv image_concepts.json ./data/
@@ -51,62 +65,62 @@ Now we can train the baseline models and the baseline w/ MIA models with:
 #### Visual Attention
 * **Baseline**
 ```
-CUDA_VISIBLE_DEVICES=0,1 python train.py --basic_model VisualAttention --MIA False
+CUDA_VISIBLE_DEVICES=0,1 python train.py --basic_model VisualAttention 
 ```
 * **Baseline w/ MIA**
 ```
-CUDA_VISIBLE_DEVICES=0,1 python train.py --basic_model VisualAttention --MIA True
+CUDA_VISIBLE_DEVICES=0,1 python train.py --basic_model VisualAttention --MIA True --iteration_times 2
 ```
 
 #### Concept Attention
 * **Baseline**
 ```
-CUDA_VISIBLE_DEVICES=0,1 python train.py --basic_model ConceptAttention --MIA False
+CUDA_VISIBLE_DEVICES=0,1 python train.py --basic_model ConceptAttention
 ```
 * **Baseline w/ MIA**
 ```
-CUDA_VISIBLE_DEVICES=0,1 python train.py --basic_model ConceptAttention --MIA True
+CUDA_VISIBLE_DEVICES=0,1 python train.py --basic_model ConceptAttention --MIA True --iteration_times 2
 ```
 
 #### Visual Condition
 * **Baseline**
 ```
-CUDA_VISIBLE_DEVICES=0,1 python train.py --basic_model VisualCondition --MIA False
+CUDA_VISIBLE_DEVICES=0,1 python train.py --basic_model VisualCondition
 ```
 * **Baseline w/ MIA**
 ```
-CUDA_VISIBLE_DEVICES=0,1 python train.py --basic_model VisualCondition --MIA True
+CUDA_VISIBLE_DEVICES=0,1 python train.py --basic_model VisualCondition --MIA True --iteration_times 2
 ```
 
 #### Concept Attention
 * **Baseline**
 ```
-CUDA_VISIBLE_DEVICES=0,1 python train.py --basic_model ConceptCondition --MIA False
+CUDA_VISIBLE_DEVICES=0,1 python train.py --basic_model ConceptCondition
 ```
 * **Baseline w/ MIA**
 ```
-CUDA_VISIBLE_DEVICES=0,1 python train.py --basic_model ConceptCondition --MIA True
+CUDA_VISIBLE_DEVICES=0,1 python train.py --basic_model ConceptCondition --MIA True --iteration_times 2
 ```
 
 #### Visual Regional Attention
 * **Baseline**
 ```
-CUDA_VISIBLE_DEVICES=0,1 python train.py --basic_model VisualRegionalAttention --MIA False
+CUDA_VISIBLE_DEVICES=0,1 python train.py --basic_model VisualRegionalAttention
 ```
 * **Baseline w/ MIA**
 ```
-CUDA_VISIBLE_DEVICES=0,1 python train.py --basic_model VisualRegionalAttention --MIA True
+CUDA_VISIBLE_DEVICES=0,1 python train.py --basic_model VisualRegionalAttention --MIA True --iteration_times 2
 ```
 
 ### Testing
 We can test the trained model with 
 * **Baseline**
 ```
-CUDA_VISIBLE_DEVICES=0 python test.py  --basic_model basic_model_name --MIA False
+CUDA_VISIBLE_DEVICES=0 python test.py  --basic_model basic_model_name
 ```
 * **Baseline w/ MIA**
 ```
-CUDA_VISIBLE_DEVICES=0 python test.py  --basic_model basic_model_name --MIA True
+CUDA_VISIBLE_DEVICES=0 python test.py  --basic_model basic_model_name --MIA True --iteration_times 2
 ```
 
 ## Reference
