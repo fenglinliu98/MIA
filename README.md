@@ -7,13 +7,12 @@ Implementation of "Aligning Visual Regions and Textual Concepts for Semantic-Gro
 ###  Coming Soon!
 *  [2014 Train/Val Semantic-Grounded Image Representations](https://github.com/fenglinliu98/MIA)
 
+## [Textual Concepts (Google Drive)](https://drive.google.com/open?id=1jpSZbLXD1Ev3OC2t_NFFvxYo40UcnV7Q)
 
 ## Usage
 
 ### Requirements
 This code is written in Python2.7 and requires PyTorch >= 0.4.1
-
- [Textual Concepts (Google Drive)](https://drive.google.com/open?id=1jpSZbLXD1Ev3OC2t_NFFvxYo40UcnV7Q)
  
 You may take a look at https://github.com/s-gupta/visual-concepts to find how to get the textual concepts of an image by yourself.
 
