@@ -24,35 +24,35 @@ Download the mscoco images from  [link](http://mscoco.org/dataset/#download). We
 
 Note: We also provide a download bash script to download the mscoco images:
 ```
-bash ./data/download_mscoco_images.sh
+cd data/images/original && bash download_mscoco_images.sh
 ```
 
 * **Preprocess**
 
-Now we will need to resize all the images in both train and val folder. Here I create a new folder under data, i.e., 'resized'. Then we may run resize.py to resize all images into 256 x 256. You may specify different locations inside resize.py
+Now we may need to run resize.py to resize all the images (in both train and val folder) into 256 x 256. You may specify different locations inside resize.py
 ```
-mkdir data/resized && python resize.py
+python resize_images.py
 ```
 
 #### Download MSCOCO captions and preprocess them
 * **Download**
 
-You may download the mscoco captions from the [official website](http://mscoco.org/dataset/#download).
+You may download the mscoco captions from the [official website](http://mscoco.org/dataset/#download) or use the download bash script provided by us.
 ```
-bash ./data/download_mscoco_captions.sh
+cd data && bash download_mscoco_captions.sh
 ```
 
-Note: We also provide a [link](https://github.com/fenglinliu98/MIA) to download our preprocessed mscoco captions.
+* **Preprocess**
 
-* **Preprocess (Skip if you are using our preprocessed captions)**
 Afterwards, we should create the Karpathy split for training, validation and test.
 ```
 python KarpathySplit.py
 ```
 
 Then we can build the vocabulary by running
+(Note: You should download the [nltk_data](https://drive.google.com/open?id=1W95OMsG71cRMdMetIEGZg-fuPrSk6iVw) to build the vocabulary.)
 ```
-python build_vocab.py
+unzip nltk_data.zip && python build_vocab.py
 ```
 
 #### Download image concepts
@@ -71,7 +71,7 @@ CUDA_VISIBLE_DEVICES=0,1 python train.py --basic_model VisualAttention
 ```
 * **Baseline w/ MIA**
 ```
-CUDA_VISIBLE_DEVICES=0,1 python train.py --basic_model VisualAttention --MIA True --iteration_times 2
+CUDA_VISIBLE_DEVICES=0,1 python train.py --basic_model VisualAttention --use_MIA True --iteration_times 2
 ```
 
 #### Concept Attention
@@ -81,7 +81,7 @@ CUDA_VISIBLE_DEVICES=0,1 python train.py --basic_model ConceptAttention
 ```
 * **Baseline w/ MIA**
 ```
-CUDA_VISIBLE_DEVICES=0,1 python train.py --basic_model ConceptAttention --MIA True --iteration_times 2
+CUDA_VISIBLE_DEVICES=0,1 python train.py --basic_model ConceptAttention --use_MIA True --iteration_times 2
 ```
 
 #### Visual Condition
@@ -91,7 +91,7 @@ CUDA_VISIBLE_DEVICES=0,1 python train.py --basic_model VisualCondition
 ```
 * **Baseline w/ MIA**
 ```
-CUDA_VISIBLE_DEVICES=0,1 python train.py --basic_model VisualCondition --MIA True --iteration_times 2
+CUDA_VISIBLE_DEVICES=0,1 python train.py --basic_model VisualCondition --use_MIA True --iteration_times 2
 ```
 
 #### Concept Attention
@@ -101,7 +101,7 @@ CUDA_VISIBLE_DEVICES=0,1 python train.py --basic_model ConceptCondition
 ```
 * **Baseline w/ MIA**
 ```
-CUDA_VISIBLE_DEVICES=0,1 python train.py --basic_model ConceptCondition --MIA True --iteration_times 2
+CUDA_VISIBLE_DEVICES=0,1 python train.py --basic_model ConceptCondition --use_MIA True --iteration_times 2
 ```
 
 #### Visual Regional Attention
@@ -111,7 +111,7 @@ CUDA_VISIBLE_DEVICES=0,1 python train.py --basic_model VisualRegionalAttention
 ```
 * **Baseline w/ MIA**
 ```
-CUDA_VISIBLE_DEVICES=0,1 python train.py --basic_model VisualRegionalAttention --MIA True --iteration_times 2
+CUDA_VISIBLE_DEVICES=0,1 python train.py --basic_model VisualRegionalAttention --use_MIA True --iteration_times 2
 ```
 
 ### Testing
@@ -122,7 +122,7 @@ CUDA_VISIBLE_DEVICES=0 python test.py  --basic_model basic_model_name
 ```
 * **Baseline w/ MIA**
 ```
-CUDA_VISIBLE_DEVICES=0 python test.py  --basic_model basic_model_name --MIA True --iteration_times 2
+CUDA_VISIBLE_DEVICES=0 python test.py  --basic_model basic_model_name --use_MIA True --iteration_times 2
 ```
 
 ## Reference
