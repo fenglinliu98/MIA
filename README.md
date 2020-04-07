@@ -67,62 +67,63 @@ Now we can train the baseline models and the baseline w/ MIA models with:
 #### Visual Attention
 * **Baseline**
 ```
-CUDA_VISIBLE_DEVICES=0,1 python train.py --basic_model VisualAttention 
+CUDA_VISIBLE_DEVICES=0,1 python Train.py --basic_model=VisualAttention 
 ```
 * **Baseline w/ MIA**
 ```
-CUDA_VISIBLE_DEVICES=0,1 python train.py --basic_model VisualAttention --use_MIA True --iteration_times 2
+CUDA_VISIBLE_DEVICES=0,1 python Train.py --basic_model=VisualAttention --use_MIA=True --iteration_times=2
 ```
 
 #### Concept Attention
 * **Baseline**
 ```
-CUDA_VISIBLE_DEVICES=0,1 python train.py --basic_model ConceptAttention
+CUDA_VISIBLE_DEVICES=0,1 python Train.py --basic_model=ConceptAttention
 ```
 * **Baseline w/ MIA**
 ```
-CUDA_VISIBLE_DEVICES=0,1 python train.py --basic_model ConceptAttention --use_MIA True --iteration_times 2
+CUDA_VISIBLE_DEVICES=0,1 python Train.py --basic_model=ConceptAttention --use_MIA=True --iteration_times=2
 ```
 
 #### Visual Condition
 * **Baseline**
 ```
-CUDA_VISIBLE_DEVICES=0,1 python train.py --basic_model VisualCondition
+CUDA_VISIBLE_DEVICES=0,1 python Train.py --basic_model=VisualCondition
 ```
 * **Baseline w/ MIA**
 ```
-CUDA_VISIBLE_DEVICES=0,1 python train.py --basic_model VisualCondition --use_MIA True --iteration_times 2
+CUDA_VISIBLE_DEVICES=0,1 python Train.py --basic_model=VisualCondition --use_MIA=True --iteration_times=2
 ```
 
 #### Concept Attention
 * **Baseline**
 ```
-CUDA_VISIBLE_DEVICES=0,1 python train.py --basic_model ConceptCondition
+CUDA_VISIBLE_DEVICES=0,1 python Train.py --basic_model=ConceptCondition
 ```
 * **Baseline w/ MIA**
 ```
-CUDA_VISIBLE_DEVICES=0,1 python train.py --basic_model ConceptCondition --use_MIA True --iteration_times 2
+CUDA_VISIBLE_DEVICES=0,1 python Train.py --basic_model=ConceptCondition --use_MIA=True --iteration_times=2
 ```
 
 #### Visual Regional Attention
 * **Baseline**
 ```
-CUDA_VISIBLE_DEVICES=0,1 python train.py --basic_model VisualRegionalAttention
+CUDA_VISIBLE_DEVICES=0,1 python Train.py --basic_model=VisualRegionalAttention
 ```
 * **Baseline w/ MIA**
 ```
-CUDA_VISIBLE_DEVICES=0,1 python train.py --basic_model VisualRegionalAttention --use_MIA True --iteration_times 2
+CUDA_VISIBLE_DEVICES=0,1 python Train.py --basic_model=VisualRegionalAttention --use_MIA=True --iteration_times=2
 ```
 
 ### Testing
 We can test the trained model with 
 * **Baseline**
 ```
-CUDA_VISIBLE_DEVICES=0 python test.py  --basic_model basic_model_name
+CUDA_VISIBLE_DEVICES=0 python Test.py  --basic_model=basic_model_name
 ```
+Note: basic_model_name = (VisualAttention, ConceptAttention, VisualCondition, ConceptCondition, VisualRegionalAttention)
 * **Baseline w/ MIA**
 ```
-CUDA_VISIBLE_DEVICES=0 python test.py  --basic_model basic_model_name --use_MIA True --iteration_times 2
+CUDA_VISIBLE_DEVICES=0 python Test.py  --basic_model=basic_model_name --use_MIA=True --iteration_times=2
 ```
 
 ## Reference
