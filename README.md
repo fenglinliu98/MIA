@@ -115,7 +115,7 @@ CUDA_VISIBLE_DEVICES=0,1 python Train.py --basic_model=VisualRegionalAttention -
 ```
 
 ### Testing
-We can test the trained model with Test.py, but don't forget to download the coco-caption code from [link1](https://github.com/tylin/coco-caption)  or [link2]() into coco directory.
+We can test the trained model with Test.py, but don't forget to download the coco-caption code from [link1](https://github.com/tylin/coco-caption)  or [link2](https://drive.google.com/open?id=1WGb84aaMKXoLxCW8v34ukpXAe1zrDskp) into coco directory.
 * **Baseline**
 ```
 CUDA_VISIBLE_DEVICES=0 python Test.py  --basic_model=basic_model_name
