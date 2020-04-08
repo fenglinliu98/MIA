@@ -115,7 +115,7 @@ CUDA_VISIBLE_DEVICES=0,1 python Train.py --basic_model=VisualRegionalAttention -
 ```
 
 ### Testing
-We can test the trained model with 
+We can test the trained model with Test.py, but don't forget to download the coco-caption code from [link1](https://github.com/tylin/coco-caption)  or [link2]() into coco directory.
 * **Baseline**
 ```
 CUDA_VISIBLE_DEVICES=0 python Test.py  --basic_model=basic_model_name
@@ -145,7 +145,7 @@ If you use this code or our extracted image concepts as part of any published re
 
 ## Acknowledgements
 
-Thanks to [Torch](http://torch.ch/) team for providing Torch 0.4, [COCO](http://cocodataset.org/) team for providing dataset, [Tsung-Yi Lin](https://github.com/tylin/coco-caption) for providing evaluation codes for MS COCO caption generation, [Yufeng Ma](https://github.com/yufengm) for providing open source repositories and Torchvision [ResNet](https://github.com/pytorch/vision) implementation. 
+Thanks to [Pytorch](https://pytorch.org/) team for providing Pytorch, [COCO](http://cocodataset.org/) team for providing dataset, [Tsung-Yi Lin](https://github.com/tylin/coco-caption) for providing evaluation codes for MS COCO caption generation, [Yufeng Ma](https://github.com/yufengm) for providing open source repositories and Torchvision [ResNet](https://github.com/pytorch/vision) implementation. 
 
 ### Note
 If you have any questions about the code or our paper, please send an email to fenglinliu98@pku.edu.cn
