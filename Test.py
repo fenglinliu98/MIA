@@ -169,7 +169,12 @@ def main( args ):
 
         print '-----------Evaluation performance on MS-COCO dataset----------'
         
-        f = open( args.save_score_file, 'a' )
+        if args.use_MIA:
+            save_score_file = args.score_file_name + '-' + args.basic_model + "-MIA"
+        else:
+            save_score_file = args.score_file_name + '-' + args.basic_model 
+            
+        f = open( save_score_file, 'a' )
         
         f.write('\n The evaluation scores about epoch %d are: \n'%( epoch ))
         for metric, score in cocoEval.eval.items():
@@ -216,7 +221,7 @@ if __name__ == '__main__':
                         help='dimension of word embedding vectors')
     parser.add_argument('--hidden_size', type=int, default=512,
                         help='dimension of lstm hidden states')
-    parser.add_argument('--eval_batch_size', type=int, default=20)
+    parser.add_argument('--eval_batch_size', type=int, default=50)
     parser.add_argument('--num_workers', type=int, default=4)
 
     args = parser.parse_args()
