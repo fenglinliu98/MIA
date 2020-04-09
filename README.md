@@ -104,7 +104,7 @@ CUDA_VISIBLE_DEVICES=0,1 python Train.py --basic_model=ConceptCondition
 CUDA_VISIBLE_DEVICES=0,1 python Train.py --basic_model=ConceptCondition --use_MIA=True --iteration_times=2
 ```
 
-#### Visual Regional Attention
+#### Visual Regional Attention (Coming Soon!)
 * **Baseline**
 ```
 CUDA_VISIBLE_DEVICES=0,1 python Train.py --basic_model=VisualRegionalAttention
