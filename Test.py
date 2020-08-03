@@ -73,6 +73,9 @@ class CocoEvalLoader( datasets.ImageFolder ):
         
         return img, image_concepts, img_id, filename
 
+    def __len__(self):
+        return len( self.imgs )
+        
 # MSCOCO Evaluation function
 def main( args ):
 
@@ -170,11 +173,11 @@ def main( args ):
         print '-----------Evaluation performance on MS-COCO dataset----------'
         
         if args.use_MIA:
-            save_score_file = args.score_file_name + '-' + args.basic_model + "-MIA"
+            save_file = args.save_score_file + '-' + args.basic_model + "-MIA"
         else:
-            save_score_file = args.score_file_name + '-' + args.basic_model 
+            save_file = args.save_score_file + '-' + args.basic_model 
             
-        f = open( save_score_file, 'a' )
+        f = open( save_file, 'a' )
         
         f.write('\n The evaluation scores about epoch %d are: \n'%( epoch ))
         for metric, score in cocoEval.eval.items():
@@ -196,7 +199,7 @@ if __name__ == '__main__':
                         help='path for vocabulary wrapper')
     parser.add_argument('--result_path', type=str, default='./results',
                         help='path for saving generated captions')
-    parser.add_argument('--save_score_file', type=str, default='./evaluation_scores.txt',
+    parser.add_argument('--save_score_file', type=str, default='./evaluation_scores',
                         help='path for saving the evaluation performance')
     parser.add_argument('--image_dir', type=str, default='./data/images/resized',
                         help='directory for resized training images')
