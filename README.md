@@ -22,7 +22,7 @@ You may take a look at https://github.com/s-gupta/visual-concepts to find how to
 
 Download the mscoco images from  [link](http://mscoco.org/dataset/#download). You need 2014 training images and 2014 val. images. You should put the train2014/ and val2014/ in the ./data/images/ directory.
 
-Note: You also provide a download bash script to download the mscoco images:
+Note: We also provided a download bash script to download the mscoco images:
 ```
 cd data/images/original && bash download_mscoco_images.sh
 ```
@@ -61,8 +61,9 @@ Download the [Textual Concepts (Google Drive)](https://drive.google.com/open?id=
 mv image_concepts.json ./data
 ```
 
-### Start Training
-Now you can train the baseline models and the baseline w/ MIA models with: 
+### Start Training 
+Now you can train the baseline models and the baseline w/ MIA models with:  
+(Note: We also relased the pre-trained models in [Google Drive] (Coming Soon!))
 
 #### Visual Attention
 * **Baseline**
@@ -94,7 +95,7 @@ CUDA_VISIBLE_DEVICES=0,1 python Train.py --basic_model=VisualCondition
 CUDA_VISIBLE_DEVICES=0,1 python Train.py --basic_model=VisualCondition --use_MIA=True --iteration_times=2
 ```
 
-#### Concept Attention
+#### Concept Condition
 * **Baseline**
 ```
 CUDA_VISIBLE_DEVICES=0,1 python Train.py --basic_model=ConceptCondition
