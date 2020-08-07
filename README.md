@@ -9,6 +9,9 @@ Implementation of "Aligning Visual Regions and Textual Concepts for Semantic-Gro
 
 ## [Textual Concepts (Google Drive)](https://drive.google.com/open?id=1jpSZbLXD1Ev3OC2t_NFFvxYo40UcnV7Q)
 
+## [Pre-trained Models (Google Drive)]
+###  Coming Soon!
+
 ## Usage
 
 ### Requirements
@@ -63,7 +66,7 @@ mv image_concepts.json ./data
 
 ### Start Training 
 Now you can train the baseline models and the baseline w/ MIA models with:  
-(Note: We also relased the pre-trained models in [Google Drive] (Coming Soon!))
+(Note: We also released the pre-trained models in [Google Drive] (Coming Soon!))
 
 #### Visual Attention
 * **Baseline**
