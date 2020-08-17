@@ -149,12 +149,12 @@ class Decoder( nn.Module ):
         if "Visual" in basic_model:
             # The first decoding step: Visual Condition
             if "Condition" in basic_model:
-                h_t, states = self.LSTM( t_a, states )
+                h_t, states = self.LSTM( t_a.unsqueeze( 1 ), states )
             x = embeddings + v_a.unsqueeze( 1 ).expand_as( embeddings )            
         elif "Concept" in basic_model:
             # The first decoding step: Concept Condition
             if "Condition" in basic_model:
-                h_t, states = self.LSTM( v_a, states )
+                h_t, states = self.LSTM( v_a.unsqueeze( 1 ), states )
             x = embeddings + t_a.unsqueeze( 1 ).expand_as( embeddings )            
         else:
             x = embeddings
